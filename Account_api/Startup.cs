@@ -45,7 +45,6 @@ namespace Account_api
             });
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DbConnection"]));
 
-
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
               {
                   // 當驗證失敗時，顯示失敗的詳細錯誤原因
@@ -70,6 +69,18 @@ namespace Account_api
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                   };
               });
+            // CORS
+            services.AddCors(options =>
+            {
+                // 先不鎖CORS
+                options.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.SetIsOriginAllowed(origin => true)
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,6 +100,9 @@ namespace Account_api
                 endpoints.MapControllers();
             });
             dataContext.Database.EnsureCreated();
+
+            //CORS
+            app.UseCors("CorsPolicy");
         }
     }
 }

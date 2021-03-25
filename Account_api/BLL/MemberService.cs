@@ -70,7 +70,7 @@ namespace Account_api.BLL
                 catch
                 {
                     return new ExecuteResult() { Status = (char)Code.N, ErrMsg= "資料異常" };
-                    }
+                 }
             }
             else
             {

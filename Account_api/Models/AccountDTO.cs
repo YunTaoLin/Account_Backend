@@ -8,6 +8,10 @@ namespace Account_api.Models
     public class AccountDTO
     {
         /// <summary>
+        /// ID
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
         /// 型態(1:收入，2:支出)
         /// </summary>
         public string Type { get; set; }

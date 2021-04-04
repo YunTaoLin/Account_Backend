@@ -30,7 +30,7 @@ namespace Account_api.Models
         /// <summary>
         /// 金額(正數)
         /// </summary>
-        [Column(TypeName = "decimal"), Required]
+        [Column(TypeName = "decimal(18,2)"), Required]
         public decimal Price { get; set; }
 
         /// <summary>

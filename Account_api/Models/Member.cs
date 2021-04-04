@@ -30,7 +30,7 @@ namespace Account_api.Models
         /// <summary>
         /// 每月預算
         /// </summary>
-        [Column(TypeName = "decimal"), Required]
+        [Column(TypeName = "decimal(18,2)"), Required]
         public decimal Budget { get; set; }
 
         /// <summary>

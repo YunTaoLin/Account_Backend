@@ -86,5 +86,32 @@ namespace Account_api.BLL
             }
         }
 
+        /// <summary>
+        /// 刪除一筆帳務
+        /// </summary>
+        /// <param name="account"></param>
+        /// <returns></returns>
+        public ExecuteResult DeteleAccount(string UID, int Id)
+        {
+            var member = DataContext.Members.FirstOrDefault(x => x.UID == UID);
+            if (member != null)
+            {
+                try
+                {
+                    var target = DataContext.Accounts.FirstOrDefault(x => x.Id == Id);
+                    DataContext.Accounts.Remove(target);
+                    DataContext.SaveChanges();
+                    return new ExecuteResult() { Status = (char)Code.Y };
+                }
+                catch
+                {
+                    return new ExecuteResult() { ErrMsg = "新增失敗", Status = (char)Code.N };
+                }
+            }
+            else
+            {
+                return new ExecuteResult() { ErrMsg = "找無此會員", Status = (char)Code.N };
+            }
+        }
     }
 }

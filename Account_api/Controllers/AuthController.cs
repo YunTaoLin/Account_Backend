@@ -1,5 +1,6 @@
 ﻿using Account_api.BLL;
 using Account_api.DAL;
+using Account_api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,20 +21,35 @@ namespace Account_api.Controllers
             AuthService = new AuthService(configuration,options);
         }
 
-        // GET api/auth/login
-        [HttpGet, Route("login")]
-        public IActionResult Login(string UID)
+
+        [HttpPost]
+        [Route("login")]
+        public IActionResult Login(LoginDTO loginObj)
         {
-            if(UID != null)
+            if (loginObj.UID != null)
             {
-                var result = AuthService.Login(UID);
+                var result = AuthService.Login(loginObj.UID);
                 return Ok(result);
             }
             else
             {
                 return Unauthorized();
             }
-
         }
+        // GET api/auth/login
+        //[HttpGet, Route("login")]
+        //public IActionResult Login(string UID)
+        //{
+        //    if(UID != null)
+        //    {
+        //        var result = AuthService.Login(UID);
+        //        return Ok(result);
+        //    }
+        //    else
+        //    {
+        //        return Unauthorized();
+        //    }
+
+        //}
     }
 }

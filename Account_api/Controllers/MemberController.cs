@@ -24,14 +24,14 @@ namespace Account_api.Controllers
         {
             MemberService = new MemberService(options);
         }
-        [Authorize]
-        [HttpGet]
-        [Route("MemberList")]
-        public IActionResult getMemberList()
-        {
-            var result = MemberService.getMemberList();
-            return Ok(result);
-        }
+        //[Authorize]
+        //[HttpGet]
+        //[Route("MemberList")]
+        //public IActionResult getMemberList()
+        //{
+        //    var result = MemberService.getMemberList();
+        //    return Ok(result);
+        //}
         [HttpPost]
         [Route("Member/")]
         [Authorize]
@@ -46,6 +46,15 @@ namespace Account_api.Controllers
         public IActionResult createMember(MemberDTO member)
         {
             var result = MemberService.createMember(member);
+            return Ok(result);
+        }
+
+        [HttpPut]
+        [Authorize]
+        [Route("updateBudget")]
+        public IActionResult updateBudget(MemberDTO member)
+        {
+            var result = MemberService.updateBudget(User.Identity.Name,member);
             return Ok(result);
         }
 

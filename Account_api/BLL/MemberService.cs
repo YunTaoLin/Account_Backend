@@ -78,18 +78,16 @@ namespace Account_api.BLL
             }
         }
         /// <summary>
-        /// 更新會員資料/預算
+        /// 更新預算
         /// </summary>
         /// <param name="member"></param>
         /// <returns></returns>
-        public ExecuteResult updateMember(MemberDTO member)
+        public ExecuteResult updateBudget(string UID , MemberDTO member)
         {
-            var entity = DataContext.Members.FirstOrDefault(x => x.Id == member.Id);
+            var entity = DataContext.Members.FirstOrDefault(x => x.UID == UID);
             try
             {
                 entity.Budget = member.Budget;
-                entity.UID = member.UID;
-                entity.Name = member.Name;
                 DataContext.SaveChanges();
                 return new ExecuteResult() { Status = (char)Code.Y };
             }

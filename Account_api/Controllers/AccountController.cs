@@ -16,11 +16,25 @@ namespace Account_api.Controllers
         {
             AccountService = new AccountService(options);
         }
+        /// <summary>
+        /// 新增帳務
+        /// </summary>
+        /// <param name="account"></param>
+        /// <returns></returns>
         [Authorize]
         [HttpPost("addAccount")]
         public IActionResult addAccount(AccountDTO account)
         {
             var result = AccountService.AddAccount(User.Identity.Name, account);
+            return Ok(result);
+        }
+
+
+        [Authorize]
+        [HttpDelete("deleteAccount")]
+        public IActionResult deleteAccount(int Id)
+        {
+            var result = AccountService.DeteleAccount(User.Identity.Name, Id);
             return Ok(result);
         }
         [Authorize]

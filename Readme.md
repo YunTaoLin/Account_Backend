@@ -1,17 +1,17 @@
-## §@«~Â²¤¶
-- «e«áºİ¤ÀÂ÷¬[ºcªº«áºİWeb API¡C
-- ±Ä¥ÎRestful API³]­p­·®æ
-- ±Ä¥Î¤T¼h¦¡³]­p¶i¦æ±M®×¬[ºc («e«áºİ¤ÀÂ÷¬GµLªí²{¼h)
-- ¥HEntity Framework Core§@¬°ORM¤è®×( Code First¤è¦¡ )
-- ¥HJWT¹ê§@token¨­¤ÀÅçÃÒ¾÷¨î
+## ä½œå“ç°¡ä»‹
+- å‰å¾Œç«¯åˆ†é›¢æ¶æ§‹çš„å¾Œç«¯Web APIã€‚
+- æ¡ç”¨Restful APIè¨­è¨ˆé¢¨æ ¼
+- æ¡ç”¨ä¸‰å±¤å¼è¨­è¨ˆé€²è¡Œå°ˆæ¡ˆæ¶æ§‹ (å‰å¾Œç«¯åˆ†é›¢æ•…ç„¡è¡¨ç¾å±¤)
+- ä»¥Entity Framework Coreä½œç‚ºORMæ–¹æ¡ˆ( Code Firstæ–¹å¼ )
+- ä»¥JWTå¯¦ä½œtokenèº«åˆ†é©—è­‰æ©Ÿåˆ¶
 
 
-### «áºİ§Ş³N¬[ºc («eºİ½Ğ[¨£¦¹](https://github.com/YunTaoLin/Account_Frontend) )
-1. ®Ø¬[¡GASP .NET Core 5 
-2. ORM¡GEntity Framework Core 5
-3. ÃöÁp¦¡¸ê®Æ®w¡GMicrosoft SQL Server
-4. ÅçÃÒ¾÷¨î¡GAuthentication.jwtbearer
+### å¾Œç«¯æŠ€è¡“æ¶æ§‹ (å‰ç«¯è«‹[è¦‹æ­¤](https://github.com/YunTaoLin/Account_Frontend) )
+1. æ¡†æ¶ï¼šASP .NET Core 5 
+2. ORMï¼šEntity Framework Core 5
+3. é—œè¯å¼è³‡æ–™åº«ï¼šMicrosoft SQL Server
+4. é©—è­‰æ©Ÿåˆ¶ï¼šAuthentication.jwtbearer
 
-### ºô¯¸¤J¤f(½Ğ¥Î²¾°Ê³]³ÆÅéÅç)
-`¤ä´©PWA`
-![ºô¯¸¤J¤f](https://i.imgur.com/oMwh8R4.png)
+### ç¶²ç«™å…¥å£(è«‹ç”¨ç§»å‹•è¨­å‚™é«”é©—)(2022/06/27æ›´æ–°ï¼šå› è³‡æ–™åº«ä¸€å¹´çš„å…è²»æ¬Šç›Šåˆ°æœŸï¼Œæš«æ™‚å…ˆä¸‹æ¶ç¶²ç«™ã€‚æƒ³é«”é©—è€…å¯è‡ªè¡Œcloneå°ˆæ¡ˆ)
+`æ”¯æ´PWA`
+![ç¶²ç«™å…¥å£](https://i.imgur.com/oMwh8R4.png)
